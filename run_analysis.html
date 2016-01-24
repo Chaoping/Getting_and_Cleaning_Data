@@ -107,7 +107,7 @@ dt = dt[,measure.index, with = F] # to select columns in data.table, &quot;with 
 <div id="create-a-new-tidy-data-set" class="section level2">
 <h2>5. Create a new tidy data set:</h2>
 <pre class="r"><code>dt.tidy = aggregate(.~activity_label+subject+dataset, data = dt, mean)
-write.csv(dt.tidy, &quot;tidy.data.csv&quot;, row.names = FALSE)</code></pre>
+write.table(dt.tidy, &quot;tidy.data.txt&quot;, sep = &quot;\t&quot;, row.names = FALSE)</code></pre>
 </div>
 </div>
 

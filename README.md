@@ -11,7 +11,7 @@ Files:
 |run_analysis.R||
 |run_analysis.md||
 |run_analysis.html||
-|tidy.data.csv|Tidy data set|
+|tidy.data.txt|Tidy data set|
 |codebook.Rmd|Used to generate the .md and the .html files.|
 |codebook.md|Codebook in markdown.|
 |codebook.html|Codebook in html.|

@@ -1,7 +1,7 @@
 ## ------------------------------------------------------------------------
 library(data.table)
 
-## --------------------------------------------------------------
+## ---------------------------------------------------------------
 download.file("http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "dataset.zip")
 unzip("dataset.zip")
 
@@ -34,5 +34,5 @@ dt$activity_label = activity_labels$V2[dt$activity_label]
 
 ## ------------------------------------------------------------------------
 dt.tidy = aggregate(.~activity_label+subject+dataset, data = dt, mean)
-write.csv(dt.tidy, "tidy.data.csv", row.names = FALSE)
+write.table(dt.tidy, "tidy.data.txt", sep = "\t", row.names = FALSE)
 

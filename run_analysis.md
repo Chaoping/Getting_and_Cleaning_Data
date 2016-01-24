@@ -66,7 +66,7 @@ The varible names have been already set at the reading data step. (See the param
 
 ```r
 dt.tidy = aggregate(.~activity_label+subject+dataset, data = dt, mean)
-write.csv(dt.tidy, "tidy.data.csv", row.names = FALSE)
+write.table(dt.tidy, "tidy.data.txt", sep = "\t", row.names = FALSE)
 ```
 
 
