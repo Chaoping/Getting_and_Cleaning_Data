@@ -1,0 +1,37 @@
+Project Codebook
+==================
+Data Source
+----------
+Downloaded at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. The line of code is included in run_analysis.R and run_analysis.Rmd files
+
+Data Cleaning
+----------------
+The original data have 561 varibles and are separated into two data sets:
+ 1. Training set: 7352 observations
+ 2. Test set: 2947 observations
+
+The following steps are taken to reformat the data:
+ 1. Combine training and test data sets with one added column to label the source.
+ 2. Extract only the mean and standard deviation. This reduces the number of varibles to 66.
+ 3. Label the activities using the following:
+   * WALKING
+   * WALKING_UPSTAIRS
+   * WALKING_DOWNSTAIRS
+   * SITTING
+   * STANDING
+   * LAYING
+ 4. A new tidy data set has been created by aggregating the mean of each variable for each subject and activity.
+
+For more detailed implementation, please refer to **run_analysis.Rmd**.
+
+Overview of the Processed Data:
+-----------------
+Structure:
+```{r, echo = F}
+str(dt.tidy)
+```
+
+Summary:
+```{r, echo = F}
+summary(dt.tidy)
+```
